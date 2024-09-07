@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    margin-left: 0;
+}
+
+.header {
+    margin: 0;
+}
+
+.text {
+    font-size: 20px;
+    margin: 0;
+}
