@@ -37,16 +37,15 @@ function App() {
   const positiveFeedback = Math.round((feedbacks.good / totalFeedback) * 100);
 
   useEffect(() => { window.localStorage.setItem('feedbacks', JSON.stringify(feedbacks)) }, [feedbacks]);
-  
 
   return (
     <>
       <Description />
       <Options updateFeedback={updateFeedback} totalFeedback={totalFeedback} resetFeedbacks={resetFeedbacks} />
       {totalFeedback > 0 && (<Feedback feedbacks={feedbacks} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback} />)}
-      <Notification totalFeedback={totalFeedback}/>
+      {totalFeedback === 0 && <Notification />}
     </>
   )
 }
 
-export default App
+export default App;
